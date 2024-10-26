@@ -1,0 +1,14 @@
+main {
+  min-height: 100vh;
+  background-color: #b4c2ca;
+  display: flex;
+
+  .wrapper {
+    width: 100%;
+    height: 100vh;
+    border: 1px solid slategray;
+    border-radius: 25px;
+    padding: 30px;
+    background-color: #fff;
+  }
+}

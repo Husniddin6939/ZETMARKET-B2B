@@ -1,0 +1,86 @@
+aside {
+  position: sticky;
+  top: 0;
+  width: 20%;
+  height: 100vh;
+  background-color: #fff;
+  border-radius: 25px;
+  border: 4px solid rgba(112, 128, 144, 0.776);
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.81);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.9px);
+  -webkit-backdrop-filter: blur(4.9px);
+
+  .logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    gap: 6px;
+
+    img {
+      width: 36px;
+    }
+
+    p {
+      font-weight: 700;
+    }
+  }
+
+  .list {
+    margin-top: 40px;
+    border-top: 1px solid #515569;
+    padding-top: 40px;
+
+    &-item {
+      padding: 10px 14px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      text-decoration: none;
+      color: #515569;
+      border-radius: 25px;
+      margin-bottom: 8px;
+      transition: 0.18s linear;
+      &:hover {
+        color: #000;
+        background-color: rgba(112, 128, 144, 0.107);
+      }
+    }
+  }
+
+  .settings {
+    position: absolute;
+    bottom: 50px;
+    margin: 20px auto;
+    width: 80%;
+    cursor: pointer;
+
+    .avatar {
+      height: 86px;
+      width: 86px;
+      border-radius: 50%;
+      margin: 10px auto;
+      display: block;
+      border: 2px solid #cceabb;
+    }
+
+    h3 {
+      text-align: center;
+      font-weight: 400;
+    }
+  }
+}
+
+.active {
+  background-color: #000;
+  color: #fff !important;
+
+  &:hover {
+    color: #000 !important;
+  }
+}
