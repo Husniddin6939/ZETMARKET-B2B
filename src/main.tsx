@@ -10,7 +10,7 @@ import './index.css';
 createRoot(document.getElementById('root')!).render(
   <ConfigProvider theme={globalThemeconfig}>
     <Provider store={store}>
-    <RouterProvider router={AppRouter} />
+      <RouterProvider router={AppRouter} />
     </Provider>
   </ConfigProvider>
 );

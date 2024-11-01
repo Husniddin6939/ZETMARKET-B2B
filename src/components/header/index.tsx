@@ -4,12 +4,11 @@ import { ToggleSwitch } from '@ui';
 import './_style.scss';
 
 export const Header = () => {
-
-  const {placeholder}=useSelector((state:RootState)=>state.search)
+  const { placeholder } = useSelector((state: RootState) => state.search);
 
   return (
     <header>
-      <ToggleSwitch/>
+      <ToggleSwitch />
       <div className="search">
         <input type="text" placeholder={placeholder} />
         <i className="bi bi-search"></i>

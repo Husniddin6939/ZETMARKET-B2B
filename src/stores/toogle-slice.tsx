@@ -1,24 +1,24 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice } from '@reduxjs/toolkit';
 // import type { PayloadAction } from '@reduxjs/toolkit'
 
 export interface IToogleState {
-  isOpen:Boolean
+  isOpen: Boolean;
 }
 
 const initialState: IToogleState = {
-  isOpen:true
-}
+  isOpen: true,
+};
 
 export const ToggleSlice = createSlice({
   name: 'toggle',
   initialState,
   reducers: {
     toggleAside: (state) => {
-     state.isOpen=!state.isOpen
+      state.isOpen = !state.isOpen;
     },
   },
-})
+});
 
-export const { toggleAside} = ToggleSlice.actions
+export const { toggleAside } = ToggleSlice.actions;
 
-export default ToggleSlice.reducer
+export default ToggleSlice.reducer;

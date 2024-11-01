@@ -13,7 +13,7 @@ export const Stat = () => {
           ))}
         </div>
         <div className="chart">
-          <BarChart/>
+          <BarChart />
         </div>
       </div>
     </section>

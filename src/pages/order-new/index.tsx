@@ -1,5 +1,10 @@
+import { FilterHeader } from '@ui';
+import {DataTable} from "@components"
 import './_style.scss';
 
 export const OrderNew = () => {
-  return <div>OrderNew</div>;
+  return <section>
+    <FilterHeader/>
+    <DataTable/>
+  </section>;
 };

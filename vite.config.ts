@@ -26,6 +26,7 @@ export default defineConfig({
       "@images": path.resolve(__dirname, "./src/images"),
       "@fonts": path.resolve(__dirname, "./src/fonts"),
       "@theme": path.resolve(__dirname, "./src/theme"),
+      "@icons": path.resolve(__dirname, "./src/components/icons/index.tsx"),
 
     } as AliasOptions
   },

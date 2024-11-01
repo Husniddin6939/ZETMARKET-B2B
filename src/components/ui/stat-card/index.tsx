@@ -4,7 +4,7 @@ import './_style.scss';
 
 export const StatCard: FC<TCardPropsType> = ({ title, icon, value, color }) => {
   const cardStyle = {
-    backgroundColor: color,
+    backgroundColor:color,
   };
 
   return (

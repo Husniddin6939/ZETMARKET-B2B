@@ -1,5 +1,5 @@
 import { Link, NavLink } from 'react-router-dom';
-import { useSelector} from 'react-redux';
+import { useSelector } from 'react-redux';
 import { LogoutButton } from '@ui';
 import { navigation } from '@constants';
 import { checkRole } from '@utils';
@@ -10,14 +10,12 @@ import './_style.scss';
 let role = localStorage.getItem('role') || 'admin';
 
 export const Aside = () => {
+  const { isOpen } = useSelector((state: RootState) => state.toggle);
 
-const {isOpen}=useSelector((state:RootState)=>state.toggle);
-
- const asideStyle={
-    transform:isOpen ? 'translateX(0)' : 'translateX(-100%)',
-    transition:"all 0.4s ease"
-    
- }
+  const asideStyle = {
+    transform: isOpen ? 'translateX(0)' : 'translateX(-100%)',
+    transition: 'all 0.4s ease',
+  };
 
   return (
     <aside style={asideStyle}>
