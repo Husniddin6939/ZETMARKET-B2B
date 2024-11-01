@@ -10,6 +10,7 @@ export default defineConfig({
     alias: {
       "@": path.resolve(__dirname, "./src"),
       "@components": path.resolve(__dirname, "./src/components"),
+      "@charts": path.resolve(__dirname, "./src/components/charts"),
       "@ui": path.resolve(__dirname, "./src/components/ui"),
       "@utils": path.resolve(__dirname, "./src/utils/index.ts"),
       "@styles": path.resolve(__dirname, "./src/styles"),
@@ -20,7 +21,8 @@ export default defineConfig({
       "@layouts": path.resolve(__dirname, "./src/layouts"),
       "@ttypes": path.resolve(__dirname, "./src/ttypes"),
       "@constants": path.resolve(__dirname, "./src/constants/index.data.tsx"),
-      "@store": path.resolve(__dirname, "./src/store"),
+      "@store": path.resolve(__dirname, "./src/stores/store.tsx"),
+      "@stores": path.resolve(__dirname, "./src/stores/index.tsx"),
       "@images": path.resolve(__dirname, "./src/images"),
       "@fonts": path.resolve(__dirname, "./src/fonts"),
       "@theme": path.resolve(__dirname, "./src/theme"),

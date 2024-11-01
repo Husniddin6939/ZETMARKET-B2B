@@ -1,0 +1,14 @@
+.stat {
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    align-items: center;
+    padding: 12px 0;
+    gap: 15px;
+    width: 100%;
+  }
+  .chart{
+    border-radius: 12px;
+    overflow: hidden;
+  }
+}

@@ -1,22 +1,33 @@
 import { Link, NavLink } from 'react-router-dom';
+import { useSelector} from 'react-redux';
 import { LogoutButton } from '@ui';
 import { navigation } from '@constants';
 import { checkRole } from '@utils';
-import type { TnavigationType } from '@ttypes';
+import type { InavigationType } from '@ttypes';
+import { RootState } from '@store';
 import './_style.scss';
 
 let role = localStorage.getItem('role') || 'admin';
 
 export const Aside = () => {
+
+const {isOpen}=useSelector((state:RootState)=>state.toggle);
+
+ const asideStyle={
+    transform:isOpen ? 'translateX(0)' : 'translateX(-100%)',
+    transition:"all 0.4s ease"
+    
+ }
+
   return (
-    <aside>
+    <aside style={asideStyle}>
       <Link to="/" className="logo">
         <img src="/icon.png" alt="img" />
         <p>ZETMARKET B2B</p>
       </Link>
       <ul className="list">
-        {checkRole(navigation, role).map((item: TnavigationType) => (
-          <li>
+        {checkRole(navigation, role).map((item: InavigationType) => (
+          <li key={item.path}>
             <NavLink to={item.path} className="list-item">
               <i className={item.icon}></i>
               <span>{item.title}</span>

@@ -6,6 +6,7 @@
     "paths": {
       "@/*":["/src/*"],
       "@components":["src/components/*"],
+      "@charts":["src/components/charts/index.tsx"],
       "@ui":["src/components/ui/index.tsx"],
       "@services":["src/services/*"],
       "@utils":["src/utils/index.ts"],
@@ -16,7 +17,8 @@
       "@router":["src/router/*"],
       "@layouts":["src/layouts/*"],
       "@pages":["src/pages/*"],
-      "@stores":["src/stores/*"],
+      "@store":["src/stores/store.tsx"],
+      "@stores":["src/stores/index.tsx"],
       "@assets":["src/assets/*"],
       "@styles":["src/styles/*"],
       "@images":["src/images/*"],
