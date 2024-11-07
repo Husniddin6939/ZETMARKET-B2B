@@ -159,7 +159,7 @@ export const TableData = [
     productName:'Samsung Galaxy',
     quentity:2,
     totalPrice:2000000,
-    status:'Complated',
+    status:'pending',
     id:123456,
     date:'2022-01-01',
     paymentMethod:'Uzum'
@@ -173,7 +173,7 @@ export const TableData = [
     productName:'Samsung Galaxy',
     quentity:2,
     totalPrice:2000000,
-    status:'Complated',
+    status:'processing',
     id:123456,
     date:'2022-01-01',
     paymentMethod:'Alif'
@@ -201,7 +201,7 @@ export const TableData = [
     productName:'Samsung Galaxy',
     quentity:2,
     totalPrice:2000000,
-    status:'Complated',
+    status:'canceled',
     id:123456,
     date:'2022-01-01',
     paymentMethod:'OpenCard'
@@ -215,7 +215,7 @@ export const TableData = [
     productName:'Samsung Galaxy',
     quentity:2,
     totalPrice:2000000,
-    status:'Complated',
+    status:'unknown',
     id:123456,
     date:'2022-01-01',
     paymentMethod:'InTend'

@@ -1,10 +1,10 @@
 import React from 'react';
-import { Table } from 'antd';
+import { Table, Button, Flex } from 'antd';
+import { Link } from 'react-router-dom';
 import type { TableColumnsType } from 'antd';
 import type { ITableDataType } from '@ttypes';
 import { TableData } from '@constants';
-import { record } from 'zod';
-import { PartnerLogo } from '@ui';
+import { PartnerLogo, Status, ComplatedButton, UseClipboard } from '@ui';
 
 
 
@@ -20,18 +20,50 @@ const columns: TableColumnsType<ITableDataType> = [
   {
     title: 'Full Name',
     dataIndex: 'fullName',
+    render: (_, record) => {
+      return (
+        <Flex gap={6}>
+          <span>{record.fullName}</span>
+          <UseClipboard text={record.fullName}/>
+        </Flex>
+      )
+    }
   },
   {
     title: 'Phone number',
     dataIndex: 'phoneNumber',
+    render: (_, record) => {
+      return (
+        <Flex gap={6}>
+          <span>{record.phoneNumber}</span>
+          <UseClipboard text={record.phoneNumber.substring(4, 14)}/>
+        </Flex>
+      )
+    }
   },
   {
     title: 'Address',
     dataIndex: 'address',
+    render: (_, record) => {
+      return (
+        <Flex gap={6}>
+          <span>{record.address}</span>
+          <UseClipboard text={record.address}/>
+        </Flex>
+      )
+    }
   },
   {
     title: 'Product name',
     dataIndex: 'productName',
+    render: (_, record) => {
+      return (
+        <Flex gap={6}>
+          <span>{record.productName}</span>
+          <UseClipboard text={record.productName}/>
+        </Flex>
+      )
+    }
   },
   {
     title:'Quantity',
@@ -40,6 +72,14 @@ const columns: TableColumnsType<ITableDataType> = [
   {
     title: 'Total price',
     dataIndex: 'totalPrice',
+    render: (_, record) => {
+      return (
+        <Flex gap={6}>
+          <span>{record.totalPrice}</span>
+          <UseClipboard text={record.totalPrice}/>
+        </Flex>
+      )
+    }
   },
   {
     title: 'Payment method',
@@ -51,10 +91,23 @@ const columns: TableColumnsType<ITableDataType> = [
   {
     title: 'Status',
     dataIndex: 'status',
+    render: (_, record) => {
+      return <Status type={record.status}/>
+    }
   },
   {
     title: 'Action',
     dataIndex: 'action',
+    render:(_, record) => (
+        <Flex gap={3}>
+          <ComplatedButton {...record}/>
+          <Button>
+            <Link to="/">
+              <i className='bi bi-three-dots-vertical'></i>
+            </Link>
+          </Button>
+        </Flex>
+    )
   },
 ];
 

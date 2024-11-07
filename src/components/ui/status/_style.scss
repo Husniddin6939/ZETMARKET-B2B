@@ -1,0 +1,30 @@
+.status{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border-radius: 20px;
+    padding: 3px;
+    width: 110px;
+    cursor: pointer;
+}
+
+.pending{
+    background-color: #c7ff0f;
+}
+
+.complated{
+    background-color: rgb(36, 226, 36);
+}
+
+.processing{
+    background-color: rgb(255, 255, 53);
+}
+
+.canceled{
+    background-color: #ff0e0e;
+}
+
+.unknown{
+    background-color: rgb(156, 169, 181);
+}
